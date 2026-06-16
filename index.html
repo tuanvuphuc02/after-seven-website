@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,28 +7,204 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/components.css">
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      font-family: 'Georgia', serif;
+      background: #fff;
+      color: #111;
       min-height: 100vh;
     }
 
-    img {
-      max-width: 600px;
-      width: 100%;
-      border-radius: 8px;
+    /* NAV */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 48px;
     }
 
-    p {
-      margin-top: 16px;
-      font-size: 1.1rem;
+    .nav-logo {
+      font-family: 'Georgia', serif;
+      font-style: italic;
+      font-size: 1.3rem;
+      font-weight: normal;
+      letter-spacing: 0.02em;
+    }
+
+    /* HERO */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 60px 24px 80px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff3cd;
+      border: 1px solid #f0d060;
+      border-radius: 999px;
+      padding: 8px 20px;
+      font-family: sans-serif;
+      font-size: 0.88rem;
+      color: #7a5c00;
+      margin-bottom: 36px;
+    }
+
+    .badge svg {
+      width: 16px;
+      height: 16px;
+      stroke: #7a5c00;
+      fill: none;
+      stroke-width: 1.5;
+    }
+
+    .hero h1 {
+      font-family: 'Georgia', serif;
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+      color: #0a0a1a;
+      margin-bottom: 28px;
+    }
+
+    .hero p {
+      font-family: sans-serif;
+      font-size: 1rem;
+      line-height: 1.75;
+      color: #444;
+      max-width: 680px;
+      margin-bottom: 48px;
+    }
+
+    /* BUILDING NOTICE */
+    .building {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: sans-serif;
+      font-size: 0.95rem;
+      color: #7a5c00;
+      background: #fff3cd;
+      border: 1px solid #f0d060;
+      border-radius: 8px;
+      padding: 10px 20px;
+      margin-bottom: 64px;
+    }
+
+    .building .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #ccc;
+      animation: pulse 1.4s ease-in-out infinite;
+    }
+
+    .building .dot:nth-child(2) { animation-delay: 0.2s; }
+    .building .dot:nth-child(3) { animation-delay: 0.4s; }
+
+    @keyframes pulse {
+      0%, 80%, 100% { opacity: 0.3; transform: scale(0.9); }
+      40% { opacity: 1; transform: scale(1.1); }
+    }
+
+    /* OWNER */
+    .owner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      padding-bottom: 64px;
+    }
+
+    .owner img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #eee;
+    }
+
+    .owner-name {
+      font-family: sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #111;
+    }
+
+    .owner-title {
+      font-family: sans-serif;
+      font-size: 0.82rem;
+      color: #888;
+    }
+
+    /* COMING SOON BANNER */
+    .coming-soon {
+      text-align: center;
+      padding: 16px;
+      background: #fef9ec;
+      border-top: 1px solid #f0e6c0;
+      font-family: sans-serif;
+      font-size: 0.85rem;
+      color: #9a7c30;
+      letter-spacing: 0.04em;
     }
   </style>
 </head>
 <body>
-  <img src="YOUR_IMAGE_URL_HERE" alt="After Seven">
-  <p>This website is owned by After Seven</p>
+
+  <div class="coming-soon">
+    Website đang trong quá trình phát triển &mdash; Coming Soon
+  </div>
+
+  <nav>
+    <div class="nav-logo">After Seven</div>
+  </nav>
+
+  <section class="hero">
+    <div class="badge">
+      <!-- sparkle icon -->
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M12 3v1m0 16v1m8.66-10h-1M4.34 12h-1m14.95-6.95-.71.71M6.71 17.29l-.71.71m0-11.31.71.71M17.29 17.29l.71.71M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"/>
+      </svg>
+      Premium Dating Experience
+    </div>
+
+    <h1>AFTER SEVEN:<br>TRƯỚC KHI TA BẮT ĐẦU</h1>
+
+    <p>
+      After Seven là một nền tảng riêng tư nhằm kết nối và trải nghiệm hẹn hò dựa trên sự phân tích
+      về tính cách, năng lượng cảm xúc, lối sống và mong muốn cá nhân cho những người trẻ đang
+      tìm kiếm sự đồng điệu cảm xúc hoặc những mối quan hệ gắn kết vượt xa những ứng dụng hẹn
+      hò hiện đại.
+    </p>
+
+    <div class="building">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      We are still building, please wait...
+    </div>
+  </section>
+
+  <div class="owner">
+    <img src="https://scontent.fhan5-11.fna.fbcdn.net/v/t39.30808-1/549031109_4333775070180541_8718393433839243606_n.jpg?stp=dst-jpg_tt6&cstp=mx960x960&ctp=s480x480&_nc_cat=100&ccb=1-7&_nc_sid=1d2534&_nc_eui2=AeENaUhGFufyndidsKFMW6CHoy9fLB8mkPejL18sHyaQ91b7zGTlopPY50MqHDbfbHuqmyL2lcvXsLgmA7yfPsUX&_nc_ohc=wnIxgRGrm7cQ7kNvwE7G104&_nc_oc=AdqxpYU5PGSufBaKutEJc3_Bt7JQWYYvwznaQJuMi6xrhIJ7Trh1cHAeR4sSrZWbSc4&_nc_zt=24&_nc_ht=scontent.fhan5-11.fna&_nc_gid=SxeAxIdn9M-2Nd_Zi9cuxQ&_nc_ss=7b2a8&oh=00_Af_ofnrxqnzYYe_c1-Ek9IJ6Bdl3ufUy4z3HOZ7GBFa0Ag&oe=6A3747F4" alt="Kiều Thị Ánh Lệ">
+    <div class="owner-name">Kiều Thị Ánh Lệ</div>
+    <div class="owner-title">Owner, After Seven</div>
+  </div>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
