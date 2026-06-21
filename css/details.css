@@ -8,6 +8,9 @@ html {
 
 .detail-block {
   scroll-margin-top: 60px;
+}
+
+.detail-block--centered {
   text-align: center;
 }
 
