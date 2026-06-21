@@ -1,0 +1,214 @@
+/* ===================================
+   DETAIL PAGES — Plan B & Curated Match
+=================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.detail-block {
+  scroll-margin-top: 60px;
+  text-align: center;
+}
+
+.detail-list,
+.detail-sub-list {
+  text-align: left;
+  display: inline-block;
+  max-width: 600px;
+  width: 100%;
+}
+
+.detail-case {
+  text-align: left;
+}
+
+.detail-block-divider {
+  border: none;
+  border-top: 1px solid rgba(13, 13, 13, 0.15);
+  margin: 0 var(--pad-x) 0;
+}
+
+/* ===================================
+   HERO
+=================================== */
+.detail-hero {
+  padding: 40px var(--pad-x) 80px;
+  max-width: 1000px;
+}
+
+.detail-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 10vw, 7rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+.detail-hero-subtitle {
+  font-family: var(--font-display);
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+/* ===================================
+   SECTIONS
+=================================== */
+.detail-section {
+  padding: 0 var(--pad-x) 60px;
+  max-width: 900px;
+}
+
+.detail-section--service {
+  max-width: 760px;
+}
+
+.detail-section-title {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: var(--text);
+  margin-bottom: 28px;
+}
+
+/* ===================================
+   LISTS
+=================================== */
+.detail-list {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 32px;
+}
+
+.detail-list li {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.detail-list--spaced li {
+  margin-bottom: 24px;
+}
+
+.detail-sub-list {
+  list-style: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.detail-sub-list li {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+/* ===================================
+   QUOTE SECTION
+=================================== */
+.detail-quote-section {
+  padding: 60px var(--pad-x);
+  text-align: center;
+  border-top: 1px solid rgba(13, 13, 13, 0.1);
+  border-bottom: 1px solid rgba(13, 13, 13, 0.1);
+  margin: 0 var(--pad-x) 60px;
+}
+
+.detail-quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(0.95rem, 2vw, 1.25rem);
+  font-weight: 400;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ===================================
+   BODY TEXT SECTION
+=================================== */
+.detail-body-section {
+  padding: 0 var(--pad-x) 60px;
+  max-width: 760px;
+}
+
+.detail-body-section--intro {
+  max-width: 760px;
+  padding-bottom: 80px;
+}
+
+.detail-body-text p {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  line-height: 1.85;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+.detail-note {
+  font-size: 0.8rem !important;
+  color: var(--text-muted) !important;
+  margin-top: 8px;
+}
+
+/* ===================================
+   CASE / SPECIAL BLOCK
+=================================== */
+.detail-case {
+  margin: 8px 0 32px;
+  padding: 24px 28px;
+  border: 1px solid rgba(13, 13, 13, 0.2);
+}
+
+.detail-case-title {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.detail-case-note {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: var(--text);
+  margin-top: 16px;
+}
+
+/* ===================================
+   PRICE & CLOSING
+=================================== */
+.detail-price {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text);
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(13, 13, 13, 0.15);
+}
+
+.detail-closing {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  line-height: 1.85;
+  color: var(--text-muted);
+  margin-bottom: 40px;
+}
+
+/* ===================================
+   CTA
+=================================== */
+.detail-cta {
+  padding: 40px 0 80px;
+  display: flex;
+  justify-content: center;
+}
