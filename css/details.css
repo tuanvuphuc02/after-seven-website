@@ -7,6 +7,7 @@ html { scroll-behavior: smooth; }
 /* Section wrapper */
 .sd-block {
   scroll-margin-top: 60px;
+  --pad-x: 150px;
 }
 
 /* Centers everything in Curated Match */
