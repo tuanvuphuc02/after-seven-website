@@ -1,94 +1,100 @@
-/* ===================================
-   DETAIL PAGES — Plan B & Curated Match
-=================================== */
+/* =================================
+   DETAIL PAGE — services-detail.html
+================================= */
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
-.detail-block {
+/* Section wrapper */
+.sd-block {
   scroll-margin-top: 60px;
 }
 
-.detail-block--centered {
+/* Centers everything in Curated Match */
+.sd-block--center {
   text-align: center;
 }
 
-.detail-list,
-.detail-sub-list {
-  text-align: left;
-  display: inline-block;
-  max-width: 600px;
-  width: 100%;
-}
-
-.detail-case {
-  text-align: left;
-}
-
-.detail-block-divider {
+/* Thin line between sections */
+.sd-divider {
   border: none;
   border-top: 1px solid rgba(13, 13, 13, 0.15);
-  margin: 0 var(--pad-x) 0;
+  margin: 0 var(--pad-x);
 }
 
-/* ===================================
-   HERO
-=================================== */
-.detail-hero {
-  padding: 40px var(--pad-x) 80px;
-  max-width: 1000px;
+/* =================================
+   HERO (title area)
+================================= */
+.sd-hero {
+  padding: 40px var(--pad-x) 60px;
 }
 
-.detail-hero-title {
+/* Curated Match hero gets more breathing room */
+#curated-matching .sd-hero {
+  padding-top: 80px;
+}
+
+.sd-title {
   font-family: var(--font-display);
   font-size: clamp(3rem, 10vw, 7rem);
   font-weight: 900;
   letter-spacing: -0.02em;
   line-height: 0.95;
   color: var(--text);
-  margin-bottom: 24px;
 }
 
-.detail-hero-subtitle {
+.sd-subtitle {
   font-family: var(--font-display);
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
   font-weight: 400;
   letter-spacing: 0.1em;
   color: var(--text-muted);
+  margin-top: 20px;
 }
 
-/* ===================================
-   SECTIONS
-=================================== */
-.detail-section {
+/* =================================
+   CONTENT BLOCKS
+================================= */
+.sd-content {
   padding: 0 var(--pad-x) 60px;
-  max-width: 900px;
 }
 
-.detail-section--service {
-  max-width: 760px;
-}
-
-.detail-section-title {
+/* Body paragraph — inherits text-align from parent section */
+.sd-body-p {
   font-family: var(--font-body);
-  font-size: 0.88rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
+  font-size: 0.9rem;
+  line-height: 1.85;
   color: var(--text);
-  margin-bottom: 28px;
+  margin-bottom: 20px;
 }
 
-/* ===================================
-   LISTS
-=================================== */
-.detail-list {
+.sd-note {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+/* Section heading (PLAN B DÀNH CHO AI?, VỀ DỊCH VỤ) */
+.sd-label {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+/* =================================
+   LIST — Plan B bullet list
+================================= */
+.sd-list {
   list-style: disc;
   padding-left: 20px;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
+  text-align: left;
 }
 
-.detail-list li {
+.sd-list > li {
   font-family: var(--font-body);
   font-size: 0.9rem;
   line-height: 1.75;
@@ -96,35 +102,18 @@ html {
   margin-bottom: 16px;
 }
 
-.detail-list--spaced li {
-  margin-bottom: 24px;
-}
-
-.detail-sub-list {
-  list-style: disc;
-  padding-left: 20px;
-  margin-top: 10px;
-}
-
-.detail-sub-list li {
-  font-size: 0.88rem;
-  line-height: 1.7;
-  color: var(--text);
-  margin-bottom: 6px;
-}
-
-/* ===================================
-   QUOTE SECTION
-=================================== */
-.detail-quote-section {
-  padding: 60px var(--pad-x);
-  text-align: center;
+/* =================================
+   QUOTE BLOCK
+================================= */
+.sd-quote-block {
   border-top: 1px solid rgba(13, 13, 13, 0.1);
   border-bottom: 1px solid rgba(13, 13, 13, 0.1);
-  margin: 0 var(--pad-x) 60px;
+  padding: 56px var(--pad-x);
+  margin-bottom: 60px;
+  text-align: center;
 }
 
-.detail-quote {
+.sd-quote {
   font-family: var(--font-display);
   font-style: italic;
   font-size: clamp(0.95rem, 2vw, 1.25rem);
@@ -135,43 +124,74 @@ html {
   line-height: 1.7;
 }
 
-/* ===================================
-   BODY TEXT SECTION
-=================================== */
-.detail-body-section {
-  padding: 0 var(--pad-x) 60px;
-  max-width: 760px;
+/* =================================
+   CTA BUTTON
+================================= */
+.sd-cta {
+  padding: 32px 0 80px;
+  display: flex;
+  justify-content: center;
 }
 
-.detail-body-section--intro {
-  max-width: 760px;
-  padding-bottom: 80px;
+/* =================================
+   CURATED MATCH — SERVICE SECTION
+================================= */
+.sd-service {
+  padding: 0 var(--pad-x) 80px;
 }
 
-.detail-body-text p {
+/* inline-block so text-align:center on parent centers this block,
+   while text inside remains left-aligned */
+.sd-service-list {
+  display: inline-block;
+  text-align: left;
+  list-style: disc;
+  padding-left: 20px;
+  max-width: 600px;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.sd-service-list > li {
   font-family: var(--font-body);
   font-size: 0.9rem;
-  line-height: 1.85;
+  line-height: 1.75;
   color: var(--text);
   margin-bottom: 20px;
 }
 
-.detail-note {
-  font-size: 0.8rem !important;
-  color: var(--text-muted) !important;
-  margin-top: 8px;
+.sd-sub-list {
+  display: block;
+  list-style: disc;
+  padding-left: 20px;
+  margin-top: 10px;
 }
 
-/* ===================================
-   CASE / SPECIAL BLOCK
-=================================== */
-.detail-case {
-  margin: 8px 0 32px;
-  padding: 24px 28px;
+.sd-sub-list li {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+/* =================================
+   CASE BLOCK
+================================= */
+.sd-case {
+  display: inline-block;
+  text-align: left;
   border: 1px solid rgba(13, 13, 13, 0.2);
+  padding: 24px 28px;
+  max-width: 600px;
+  width: 100%;
+  margin-bottom: 32px;
 }
 
-.detail-case-title {
+.sd-case .sd-list {
+  margin-bottom: 0;
+}
+
+.sd-case-title {
   font-family: var(--font-body);
   font-size: 0.88rem;
   font-weight: 500;
@@ -179,7 +199,7 @@ html {
   margin-bottom: 12px;
 }
 
-.detail-case-note {
+.sd-case-note {
   font-family: var(--font-body);
   font-size: 0.88rem;
   line-height: 1.7;
@@ -187,10 +207,14 @@ html {
   margin-top: 16px;
 }
 
-/* ===================================
+/* =================================
    PRICE & CLOSING
-=================================== */
-.detail-price {
+================================= */
+.sd-price {
+  display: inline-block;
+  max-width: 600px;
+  width: 100%;
+  text-align: left;
   font-family: var(--font-body);
   font-size: 1rem;
   color: var(--text);
@@ -199,19 +223,14 @@ html {
   border-bottom: 1px solid rgba(13, 13, 13, 0.15);
 }
 
-.detail-closing {
+.sd-closing {
+  display: inline-block;
+  max-width: 600px;
+  width: 100%;
+  text-align: left;
   font-family: var(--font-body);
   font-size: 0.88rem;
   line-height: 1.85;
   color: var(--text-muted);
   margin-bottom: 40px;
-}
-
-/* ===================================
-   CTA
-=================================== */
-.detail-cta {
-  padding: 40px 0 80px;
-  display: flex;
-  justify-content: center;
 }

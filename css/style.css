@@ -169,12 +169,32 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 32px var(--pad-x) 160px;
+  padding: 32px var(--pad-x) 0;
   background: var(--olive-dark);
   color: var(--white);
   font-size: 0.7rem;
   letter-spacing: 0.14em;
 }
+
+/* ===================================
+   FOOTER — LINKS ROW
+=================================== */
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px var(--pad-x) 60px;
+  background: var(--olive-dark);
+}
+
+.footer-links a {
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  color: var(--white);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.footer-links a:hover { opacity: 0.6; }
 
 /* ===================================
    FOOTER — BRAND (white)
